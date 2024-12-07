@@ -1,0 +1,87 @@
+.top-container {
+  margin-top: 6rem;
+}
+
+.top-container-content,
+.add-invoice,
+.invoice-filter-container,
+.invoice-filter-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-container-content {
+  position: relative;
+}
+
+@media (max-width: 575px) {
+  .top-container-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.add-invoice {
+  background-color: #0660fe;
+  color: #fff;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  gap: 1rem;
+}
+
+.add-invoice:where(:hover, :focus) {
+  background-color: #2c79ff;
+}
+
+.invoice-filter-container {
+  gap: 1.2rem;
+}
+
+.filter-title {
+  font-weight: 500;
+}
+
+.invoice-filter-detail {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  min-width: 12rem;
+}
+
+.invoice-filter-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: #00000024 0 3px 14px 3px;
+  width: 16rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.45s;
+}
+
+.invoice-filter-options.active {
+  top: calc(100% + 1.6rem);
+  opacity: 1;
+  visibility: visible;
+}
+
+.invoice-filter-options li {
+  list-style: none;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+}
+
+.invoice-filter-options li:first-child {
+  padding-top: 1.6rem;
+}
+
+.invoice-filter-options li:last-child {
+  padding-bottom: 1.6rem;
+}

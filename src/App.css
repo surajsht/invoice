@@ -10,4 +10,25 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Roboto", serif;
+  background: rgb(244, 248, 249);
+  background: linear-gradient(
+    151deg,
+    rgba(244, 248, 249, 1) 28%,
+    rgba(233, 242, 252, 1) 61%,
+    rgba(233, 234, 239, 1) 100%
+  );
+  min-height: 100vh;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
 }

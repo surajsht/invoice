@@ -1,0 +1,45 @@
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.4rem 0;
+}
+
+.logo {
+  font-size: 3.2rem;
+}
+
+.theme-toggle {
+  position: relative;
+  border-radius: 1.6rem;
+  border: 1px solid #000;
+  padding: 0 0.8rem;
+  height: 2.8rem;
+  width: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.theme-toggle::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0.4rem;
+  translate: 0 -50%;
+  height: calc(2.8rem - 0.8rem);
+  width: calc(2.8rem - 0.8rem);
+  background-color: #303030;
+  border-radius: 50%;
+  transition: 0.45s;
+}
+
+.theme-toggle.night-mode::before {
+  left: calc(100% - 2.4rem);
+}
+
+.theme-toggle svg:first-child {
+  height: 1.6rem;
+  width: 1.6rem;
+}
