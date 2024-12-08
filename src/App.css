@@ -11,14 +11,13 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Roboto", serif;
-  background: rgb(244, 248, 249);
-  background: linear-gradient(
-    151deg,
-    rgba(244, 248, 249, 1) 28%,
-    rgba(233, 242, 252, 1) 61%,
-    rgba(233, 234, 239, 1) 100%
-  );
+  background-color: #f2f2f2;
   min-height: 100vh;
+}
+
+body.night-mode {
+  color: #fff;
+  background-color: #292929;
 }
 
 button {
