@@ -1,0 +1,175 @@
+.new-invoice-container {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s;
+}
+
+.new-invoice-container.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.new-invoice-content {
+  height: 100%;
+  width: 62rem;
+  padding: 4rem;
+  background-color: #fff;
+  border-top-right-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+  overflow: auto;
+}
+
+@media (max-width: 767px) {
+  .new-invoice-content {
+    width: 100%;
+  }
+}
+
+.new-invoice-content::-webkit-scrollbar {
+  display: none;
+}
+
+.new-invoice-content > *:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
+.invoice-label-title {
+  display: block;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.bill-from-form > .form-item,
+.bill-to-form > .form-item {
+  margin-bottom: 2.4rem;
+}
+
+.form-item > label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-color);
+}
+
+.form-item > input,
+.item-list-table-body input {
+  display: block;
+  height: 4.8rem;
+  width: 100%;
+  border: var(--form-border);
+  outline: 0;
+  padding: 1.6rem;
+}
+
+.form-item-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.form-item-group > * {
+  flex: 1;
+}
+
+@media (max-width: 575px) {
+  .form-item-group > * {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+.item-list {
+  margin-top: 4rem;
+}
+
+.item-list-title {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.item-list-table-head,
+.item-list-table-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.item-list-table-head > *,
+.item-list-table-body > * {
+  flex: 1;
+}
+
+.item-list-table-head li {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.add-new-item {
+  display: block;
+  width: 100%;
+  border-radius: 1.6rem;
+  padding: 2rem;
+  margin-top: 3.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.add-new-item:where(:hover, :focus) {
+  background-color: var(--primary-hover-color);
+}
+
+.delete-item-list {
+  background-color: transparent;
+}
+
+.delete-item-list svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.invoice-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-invoice-btn {
+  background-color: transparent;
+  border: var(--form-border);
+  padding: 1.2rem 2.4rem;
+  border-radius: 1.6rem;
+}
+
+.new-invoice-btn.save {
+  color: #fff;
+  background-color: var(--primary-color);
+  margin-left: 1.6rem;
+  border-color: var(--primary-color);
+}
+
+.new-invoice-btn:where(:hover, :focus) {
+  color: #fff;
+  background-color: var(--primary-hover-color) !important;
+  border-color: var(--primary-hover-color) !important;
+}

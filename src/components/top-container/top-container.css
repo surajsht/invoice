@@ -24,7 +24,7 @@
 }
 
 .add-invoice {
-  background-color: #0660fe;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 1.6rem;
   border-radius: 0.8rem;

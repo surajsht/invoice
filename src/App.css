@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #0660fe;
+  --primary-hover-color: #1469ff;
+  --text-color: #888eb0;
+  --form-border: 1px solid #dfe3fa;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -30,4 +37,8 @@ button {
   max-width: 80rem;
   margin: 0 auto;
   padding: 0 1.6rem;
+}
+
+ul li {
+  list-style: none;
 }

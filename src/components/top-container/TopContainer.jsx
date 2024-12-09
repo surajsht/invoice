@@ -1,13 +1,20 @@
 import { FaPlus } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { openInvoicePopup } from "../../features/addInvoicePopup/AddPopupSlice";
 import "./top-container.css";
 
 const TopContainer = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="top-container">
       <div className="wrapper">
         <div className="top-container-content">
-          <button className="add-invoice">
+          <button
+            className="add-invoice"
+            onClick={() => dispatch(openInvoicePopup())}
+          >
             <FaPlus />
             <span> New Invoice</span>
           </button>
